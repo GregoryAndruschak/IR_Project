@@ -122,8 +122,8 @@ def make_dictionary_and_ii(books):
 
 
 def serialize_dictionary():
-    out = open('dictionary with ii.txt', 'w')
-    out2 = open('dictionary.txt', 'w')
+    out = open('../Dictionaries/dictionary with ii.txt', 'w')
+    out2 = open('../Dictionaries/dictionary.txt', 'w')
     out.write('Number of books: {}\n'.format(Book.amount))
     out2.write('Number of books: {}\n'.format(Book.amount))
     out.write('Total amount of words: {}\n'.format(Word.amount))

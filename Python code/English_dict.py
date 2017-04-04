@@ -1,4 +1,4 @@
-d = open('words(dirty).txt', 'r').read()
+d = open('../Dictionaries/words(dirty).txt', 'r').read()
 temp = ''
 for char in d:
     if char.isalpha() or char == '\n':
@@ -26,7 +26,7 @@ for word in dictionary:
         else:
             res.append(word)
 del res[0]
-out = open('words.txt', 'w')
+out = open('../Dictionaries/words.txt', 'w')
 for w in res:
     out.write(w + '\n')
 out.close()
