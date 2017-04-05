@@ -33,6 +33,9 @@ class Word(object):
     def tostring(self):
         return str(self.word) + ' ' + str(self.file_id)
 
+    def tostring_f(self):
+        return str(self.word) + ' ' + str(len(self.file_id))
+
 
 def make_array(dir):
     result = []
@@ -124,20 +127,26 @@ def make_dictionary_and_ii(books):
 def serialize_dictionary():
     out = open('../Dictionaries/dictionary with ii.txt', 'w')
     out2 = open('../Dictionaries/dictionary.txt', 'w')
+    out3 = open('../Dictionaries/dictionary with frequency.txt', 'w')
     out.write('Number of books: {}\n'.format(Book.amount))
     out2.write('Number of books: {}\n'.format(Book.amount))
+    out3.write('Number of books: {}\n'.format(Book.amount))
     out.write('Total amount of words: {}\n'.format(Word.amount))
     out2.write('Total amount of words: {}\n'.format(Word.amount))
+    out3.write('Total amount of words: {}\n'.format(Word.amount))
     out.write('Amount of words in the dictionary: {}\n\n'.format(len(Book.words)-1))
     out2.write('Amount of words in the dictionary: {}\n\n'.format(len(Book.words)-1))
+    out3.write('Amount of words in the dictionary: {}\n\n'.format(len(Book.words)-1))
     for i in range(len(Book.words)):
         if i == 0:
             continue
         else:
             out.write(Book.words[i].tostring() + '\n')
             out2.write(Book.words[i].word + '\n')
+            out3.write(Book.words[i].tostring_f() + '\n')
     out.close()
     out2.close()
+    out3.close()
 
 
 def main():
