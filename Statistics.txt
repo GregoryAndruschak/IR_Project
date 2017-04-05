@@ -1,0 +1,12 @@
+Without counting frequency.
+Real words 100 - 7365 
+Real words 80 - 84010 
+Real words 60 - 641789 
+Total words - 3901141
+
+
+Counting frequency.
+Real words 100 - 78380 
+Real words 80 - 85527 
+Real words 60 - 1053434 
+Total words - 4580589
